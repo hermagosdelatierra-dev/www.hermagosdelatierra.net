@@ -1,0 +1,64 @@
+/* Hermag@s de la Tierra — estilo único para toda la web */
+:root {
+  --fondo: #faf8f3;
+  --texto: #2b2a26;
+  --suave: #6b675e;
+  --verde: #4f6f37;
+  --verde-claro: #e8eedf;
+  --borde: #e2ddd2;
+  --ancho: 46rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+a { color: var(--verde); }
+img { max-width: 100%; height: auto; border-radius: 6px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; font-family: Georgia, "Times New Roman", serif; }
+h1 { font-size: 2rem; }
+hr { border: 0; border-top: 1px solid var(--borde); margin: 2rem 0; }
+blockquote { margin: 1.5rem 0; padding: .5rem 1.25rem; border-left: 4px solid var(--verde); background: var(--verde-claro); border-radius: 0 6px 6px 0; }
+figure { margin: 1.5rem 0; }
+mark { background: var(--verde-claro); color: inherit; }
+
+/* Cabecera y menús */
+header.site {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.5rem;
+  padding: .75rem 1rem; background: #1f1f1c;
+}
+.marca img { height: 48px; width: auto; display: block; border-radius: 0; }
+.nav, .subnav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.nav a { color: #f1eee6; text-decoration: none; }
+.nav a[aria-current] { color: #b7d39a; }
+.subnav { justify-content: center; padding: .6rem 1rem; background: var(--verde-claro); border-bottom: 1px solid var(--borde); font-size: .95rem; }
+.subnav a { text-decoration: none; }
+.subnav a[aria-current] { font-weight: 600; text-decoration: underline; }
+
+main { max-width: var(--ancho); margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+/* Columnas de WordPress: en el móvil se apilan */
+.cols { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; }
+.col { flex: 1 1 14rem; min-width: 0; }
+.center { text-align: center; }
+
+.btn { display: inline-block; padding: .6rem 1.2rem; background: var(--verde); color: #fff; border-radius: 999px; text-decoration: none; }
+
+/* Vídeos y paneles insertados */
+.embed { position: relative; aspect-ratio: 16 / 9; margin: 1.5rem 0; }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 6px; }
+
+/* Listados de artículos */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 1rem; }
+.card { display: block; padding: 1rem; background: #fff; border: 1px solid var(--borde); border-radius: 8px; color: inherit; text-decoration: none; }
+.card:hover { border-color: var(--verde); }
+.card h3 { margin: .5rem 0; color: var(--verde); font-size: 1.1rem; }
+.card p { margin: 0; color: var(--suave); font-size: .95rem; }
+
+footer.site { padding: 1.5rem 1rem; text-align: center; color: var(--suave); font-size: .9rem; border-top: 1px solid var(--borde); }
+footer.site p { margin: .25rem 0; }

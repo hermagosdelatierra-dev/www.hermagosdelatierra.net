@@ -1,0 +1,4 @@
+# Solo se publica la web de docs/. Las descargas de WordPress se quedan en local.
+/*
+!/docs/
+!/.gitignore
